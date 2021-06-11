@@ -46,7 +46,7 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - If the node modules are deleted or you want to reinstall, if the package.json is present and express is specified as a dependency then simply typing `npm install` will re-install express.js
 
-**Using `Gitignore`**
+**Using `.gitignore`**
 
 - You can create `.gitignore` file and in it type `/node_modules` then this folder will not be pushed to the github repository. Do this after installing the packages and before pusing the changes to the repository
 
