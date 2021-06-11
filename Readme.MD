@@ -1,4 +1,4 @@
-# Node.JS for MERN (MongoDB, Express.JS, React, Node.JS) Stack
+# Node.JS for MERN (MongoDb, Express.JS, React, Node.JS) Stack
 
 - Normally every browser runs javascript. Manipulats DOM
 
