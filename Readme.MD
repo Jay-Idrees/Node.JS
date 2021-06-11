@@ -6,7 +6,7 @@
 
 - Node.JS is running javascript outside the browser. It does not use DOM manpulation as there is no browser
 
-- Used to build servers for handling requests, so it is a replacement of PHP, Java
+- Used to build servers for handling requests, so it is a substitute for PHP, Java
 
 - Install the latest version of Node.JS from the following link: [**Node.JS Download**](https://nodejs.dev/download). NPM is a node package manager. When you install Node.JS it will automatically install NPM
 
@@ -46,11 +46,11 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - If the node modules are deleted or you want to reinstall, if the package.json is present and express is specified as a dependency then simply typing `npm install` will re-install express.js
 
-**Using Gitignore**
+**Using `Gitignore`**
 
 - You can create `.gitignore` file and in it type `/node_modules` then this folder will not be pushed to the github repository. Do this after installing the packages and before pusing the changes to the repository
 
-**Installing Nodemon** 
+**Installing `Nodemon`** 
 - Short for Node monitor
 - That way you do not have to constantly restart the server everytime you make changes to the code in `app.js`
 
