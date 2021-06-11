@@ -37,5 +37,9 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - Install with :
 - `npm init -y` This will create a `package.json` file where `-y` automatically selects yes for all the options
+
 - `npm install express --save` Here `--save` refers to core only dependency or `--save-dev` only for saving as a developement dependency - This updates the package.json with dependencies such that they can be re-installed later
+
 - If the node modules are deleted or you want to reinstall, if the package.json is present and express is specified as a dependency then simply typing `npm install` will re-install express.js
+
+- You can create `.gitignore` file and in it type `/node_modules` then this folder will not be pushed to the github repository. Do this after installing the packages and before pusing the changes to the repository
