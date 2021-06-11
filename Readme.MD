@@ -1,4 +1,4 @@
-# Node.JS for MERN (MongoDb, Express.JS, React, Node.JS) Stack
+# Node.JS and Express.JS for MERN (MongoDb, Express.JS, React, Node.JS) Stack
 
 - Normally every browser runs javascript. Manipulats DOM
 
@@ -26,4 +26,15 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
         return;
     }
     console.log('Wrote File');
-}); // 
+}); 
+
+// See App.js for more details
+```
+
+## Express.JS
+
+- Makes working with node easier. It is a framework for Node.Js, you do not have to re-invent the wheel
+
+- Install with :
+- `npm init`
+- `npm install express --save` Here `--save` refers to core only dependency or `--save-dev` only for saving as a developement dependency
