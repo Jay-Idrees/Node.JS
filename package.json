@@ -1,0 +1,23 @@
+{
+  "name": "Node.JS",
+  "version": "1.0.0",
+  "description": "- Normally every browser runs javascript. Manipulats DOM",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jay-Idrees/Node.JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jay-Idrees/Node.JS/issues"
+  },
+  "homepage": "https://github.com/Jay-Idrees/Node.JS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
