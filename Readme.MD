@@ -37,7 +37,7 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - Makes working with node easier. It is a framework for Node.Js, you do not have to re-invent the wheel
 
-- It handles creation of servers behind the scenes. The requests to and from the server are then handled with middleware that can perform actions according to needs
+- It handles creation of servers behind the scenes. The requests to and from the server are then handled with middleware that can perform actions on incoming/outgoing requests according to needs
 
 **Installing Express Package**
 
@@ -59,4 +59,6 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 - `npm install nodemon --save-dev`
 
 **NPM start**
-- Inside the package.json, under "scripts" { "start": "node app.js"} -this will allow you to just type `npm start` in order to start the app
+- Inside the package.json, under "scripts" { "start": "node app.js"} -this will allow you to just type `npm start` in the terminal in order to start the app
+
+- Another trick is that under "scripts" { "start": "`nodemon` app.js"} will start app.js with nodemon. Note that for it to work 'nodemon' should be listed exactly under dependencies
