@@ -37,6 +37,8 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - Makes working with node easier. It is a framework for Node.Js, you do not have to re-invent the wheel
 
+- It handles creation of servers behind the scenes. The requests to and from the server are 
+
 **Installing Express Package**
 
 - Install with :
@@ -48,10 +50,13 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 **Using `.gitignore`**
 
-- You can create `.gitignore` file and in it type `/node_modules` then this folder will not be pushed to the github repository. Do this after installing the packages and before pusing the changes to the repository
+- You can create `.gitignore` file and in it type `/node_modules`, then this folder will not be pushed to the github repository. Do this after installing the packages and before pusing the changes to the repository
 
 **Installing `Nodemon`** 
 - Short for Node monitor
-- That way you do not have to constantly restart the server everytime you make changes to the code in `app.js`
+- That way you do not have to constantly restart the server everytime you make changes to the code in `app.js`. Nodemon automatically detects changes in the files and restarts the server automatically if changes are noted
 
 - `npm install nodemon --save-dev`
+
+**NPM start**
+- Inside the package.json, under "scripts" { "start": "node app.js"} -this will allow you to just type `npm start` in order to start the app
