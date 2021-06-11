@@ -36,5 +36,6 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 - Makes working with node easier. It is a framework for Node.Js, you do not have to re-invent the wheel
 
 - Install with :
-- `npm init`
-- `npm install express --save` Here `--save` refers to core only dependency or `--save-dev` only for saving as a developement dependency
+- `npm init -y` This will create a `package.json` file where `-y` automatically selects yes for all the options
+- `npm install express --save` Here `--save` refers to core only dependency or `--save-dev` only for saving as a developement dependency - This updates the package.json with dependencies such that they can be re-installed later
+- If the node modules are deleted or you want to reinstall, if the package.json is present and express is specified as a dependency then simply typing `npm install` will re-install express.js
