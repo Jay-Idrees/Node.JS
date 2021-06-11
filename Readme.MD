@@ -10,4 +10,4 @@
 
 - The signature Node.JS file is `app.js`. This file can be run by typing `node app.js`
 
-- `require` is a globaly available function inside node.js. It informs which package to import or which file to import
+- `require` is a globaly available function inside node.js. It informs which package to import or which file to import. The imports/exports are a mechanism to split the code into files which can later be bundled at the time of deployment
