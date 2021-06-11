@@ -37,7 +37,7 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - Makes working with node easier. It is a framework for Node.Js, you do not have to re-invent the wheel
 
-- It handles creation of servers behind the scenes. The requests to and from the server are 
+- It handles creation of servers behind the scenes. The requests to and from the server are then handled with middleware that can perform actions according to needs
 
 **Installing Express Package**
 
