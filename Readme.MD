@@ -19,6 +19,11 @@ require('fs');
 
 const fs=require('fs'); // here you are storing the import function into a variable
 
+// Then you can invoke specific functions inside a module using the object oriented programming 
 fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
-    if 
+    if (err){
+        console.log(err);
+        return;
+    }
+    console.log('Wrote File');
 }); // 
