@@ -6,6 +6,8 @@
 
 - Used to build servers for handling requests, so it is a replacement of PHP, Java
 
-- Install the latest version of Node.JS from the following link: [**Node.JS Download**](https://nodejs.dev/download)
+- Install the latest version of Node.JS from the following link: [**Node.JS Download**](https://nodejs.dev/download). NPM is a node package manager. When you install Node.JS it will automatically install NPM
 
-- The signature Node.JS file is `app.js`. This file can be run by typing `node.js`
+- The signature Node.JS file is `app.js`. This file can be run by typing `node app.js`
+
+- `require` is a globaly available function inside node.js. It informs which package to import or which file to import
