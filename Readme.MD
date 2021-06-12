@@ -43,6 +43,8 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - A lot of the middlewares have request, response and call back functions. All the script in app.js is run once by Node and the tasks associated with the callback functions are followed up as the responses are received. In other words it does not wait for the a middleware function to complete and only then moving on to the next one. It operates in an asynchronous fashion. 
 
+- A typical middleware function includes `app.get('/',(req, res, next)=>{ });` Where you first specify the path, then a call back function that takes request, response and next (which instructs to move to the next middleware after next middleware after executing the request)
+
 
 -`app.use` This is non-specific
 -`app.get` This is specific for get requests
@@ -99,7 +101,7 @@ The syntax is usually middleware type such as use or get or post, then a middlwa
 
 - All of the places where express is being used, it should be imported in the file
 
-**Linking files with app.js**
+**Linking files with app.js, Import/Export modules** 
 
 - The file to be linked e-g user-routes.js should include a command that exports the module such as `module.exports=router`
 - Next in the aap.js you have to import the user-routes.js at the top with the following command `const userRoutes=require(./routes/user-routes)` you do not have to specify the file   extension when importing
