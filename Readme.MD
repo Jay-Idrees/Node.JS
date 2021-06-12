@@ -37,7 +37,20 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - Makes working with node easier. It is a framework for Node.Js, you do not have to re-invent the wheel
 
-- It handles creation of servers behind the scenes. The requests to and from the server are then handled with middleware that can perform actions on incoming/outgoing requests according to needs
+- It handles creation of servers behind the scenes. The requests to and from the server are then handled with middlewares that can perform actions on incoming/outgoing requests according to needs. It allows us to create our own middlewares
+
+- A middleware is a function that gets a request and may return a response (or edit request or response and moveon to the next middleware)
+
+- A lot of the middlewares have request, response and call back functions. All the script in app.js is run once by Node and the tasks associated with the callback functions are followed up as the responses are received. In other words it does not wait for the a middleware function to complete and only then moving on to the next one. It operates in an asynchronous fashion. 
+
+
+-`app.use` This is non-specific
+-`app.get` This is specific for get requests
+-`app.post`
+-`app.patch`
+
+The syntax is usually middleware type such as use or get or post, then a middlware path and then finally a middleware function - which acts as a call back function
+
 
 **Installing Express Package**
 
@@ -62,3 +75,10 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 - Inside the package.json, under "scripts" { "start": "node app.js"} -this will allow you to just type `npm start` in the terminal in order to start the app
 
 - Another trick is that under "scripts" { "start": "`nodemon` app.js"} will start app.js with nodemon. Note that for it to work 'nodemon' should be listed exactly under dependencies
+
+**Package Body-Parser**
+
+- `npm install body-parser --save`
+
+
+## Back-End REST API with Express.JS
