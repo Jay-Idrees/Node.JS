@@ -46,22 +46,22 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 - A typical middleware function includes `app.get('/',(req, res, next)=>{ });` Where you first specify the path (this is important as it defines when the request function will be executed), then a call back function that takes request, response and next (which instructs to move to the next middleware after executing the request, next is important if there are multiple call back functions in the middleware)
 
 
--`app.use` This is non-specific
--`app.get` This is specific for get requests
--`app.post` This is for adding new information to databases
--`app.patch` This is for updating existing new information
+- `app.use` This is non-specific
+- `app.get` This is specific for get requests
+- `app.post` This is for adding new information to databases
+- `app.patch` This is for updating existing new information
 
 The syntax is usually a middleware type such as use or get or post, then a middlware path and then finally a middleware function - which acts as a call back function
 
-`res.download()`	Prompt a file to be downloaded.
-`res.end()`     	End the response process.
-`res.json()`	    Send a JSON response.
-`res.jsonp()`	    Send a JSON response with JSONP support.
-`res.redirect()`	Redirect a request.
-`res.render()`   	Render a view template.
-`res.send()`	    Send a response of various types.
-`res.sendFile()`	Send a file as an octet stream.
-`res.sendStatus()`	Set the response status code and send its string representation as the response body.
+- `res.download()`	Prompt a file to be downloaded.
+- `res.end()`     	End the response process.
+- `res.json()`	    Send a JSON response.
+- `res.jsonp()`	    Send a JSON response with JSONP support.
+- `res.redirect()`	Redirect a request.
+- `res.render()`   	Render a view template.
+- `res.send()`	    Send a response of various types.
+- `res.sendFile()`	Send a file as an octet stream.
+- `res.sendStatus()`	Set the response status code and send its string representation as the response body.
 
 
 **Installing Express Package**
@@ -117,29 +117,29 @@ The syntax is usually a middleware type such as use or get or post, then a middl
 
 Below are all the routing methods available in Express
 
-checkout
-copy
-`delete`
-`get`
-head
-lock
-merge
-mkactivity
-mkcol
-move
-m-search
-notify
-options
-`patch`
-`post`
-purge
-`put`
-report
-search
-subscribe
-trace
-unlock
-unsubscribe
+- checkout
+- copy
+- `delete`
+- `get`
+- head
+- lock
+- merge
+- mkactivity
+- mkcol
+- move
+- m-search
+- notify
+- options
+- `patch`
+- `post`
+- purge
+- `put`
+- report
+- search
+- subscribe
+- trace
+- unlock
+- unsubscribe
 
 
 
