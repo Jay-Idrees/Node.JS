@@ -82,3 +82,15 @@ The syntax is usually middleware type such as use or get or post, then a middlwa
 
 
 ## Back-End REST API with Express.JS
+
+- API: Application Peogramming Interface- set of rules that define how applications communicate and connect with each other, REST: Represnetational State Transfer
+
+- Below are the most common types of API requests. All of these API requests are carried out by Express 
+
+- `GET` The data is flowing from the Back-End to the Front-End. Usually it is a query into a Back-End database - for example retrieving an existing list of users from a MongoDB server storing data.  Back -> Front 
+
+- `POST` The data is flowing from Front-End to the Back-End. Usually new data being added to a Back-End database- for example adding a new user.  Front -> Back
+
+- `Patch` To modify existing data in a Back-End database. First existing data is retrieved, then it is modified and then sent back to the Back-End database. Back -> Front -> Back
+
+- `Delete` Self-explanatory- deleting an existing user. Front -> Back 
