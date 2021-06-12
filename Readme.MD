@@ -43,15 +43,25 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - A lot of the middlewares have request, response and call back functions. All the script in app.js is run once by Node and the tasks associated with the callback functions are followed up as the responses are received. In other words it does not wait for the a middleware function to complete and only then moving on to the next one. It operates in an asynchronous fashion. 
 
-- A typical middleware function includes `app.get('/',(req, res, next)=>{ });` Where you first specify the path, then a call back function that takes request, response and next (which instructs to move to the next middleware after next middleware after executing the request)
+- A typical middleware function includes `app.get('/',(req, res, next)=>{ });` Where you first specify the path (this is important as it defines when the request function will be executed), then a call back function that takes request, response and next (which instructs to move to the next middleware after next middleware after executing the request, next is important if there are multiple call back functions in the middleware
 
 
 -`app.use` This is non-specific
 -`app.get` This is specific for get requests
--`app.post`
--`app.patch`
+-`app.post` This is for adding new information to databases
+-`app.patch` This is for updating existing new information
 
-The syntax is usually middleware type such as use or get or post, then a middlware path and then finally a middleware function - which acts as a call back function
+The syntax is usually a middleware type such as use or get or post, then a middlware path and then finally a middleware function - which acts as a call back function
+
+`res.download()`	Prompt a file to be downloaded.
+`res.end()`     	End the response process.
+`res.json()`	    Send a JSON response.
+`res.jsonp()`	    Send a JSON response with JSONP support.
+`res.redirect()`	Redirect a request.
+`res.render()`   	Render a view template.
+`res.send()`	    Send a response of various types.
+`res.sendFile()`	Send a file as an octet stream.
+`res.sendStatus()`	Set the response status code and send its string representation as the response body.
 
 
 **Installing Express Package**
@@ -74,13 +84,17 @@ The syntax is usually middleware type such as use or get or post, then a middlwa
 - `npm install nodemon --save-dev`
 
 **NPM start**
-- Inside the package.json, under "scripts" { "start": "node app.js"} -this will allow you to just type `npm start` in the terminal in order to start the app
+- Inside the `package.json`, under "scripts" { "start": "node app.js"} -this will allow you to just type `npm start` in the terminal in order to start the app
 
 - Another trick is that under "scripts" { "start": "`nodemon` app.js"} will start app.js with nodemon. Note that for it to work 'nodemon' should be listed exactly under dependencies
 
 **Package Body-Parser**
 
-- `npm install body-parser --save`
+- `npm install body-parser --save-dev`
+
+**Using Express Router**
+
+- At the top of `app.js` you can type `const router=expres.Router()` - You can use this when you are looking to use export modules for routing methods - as in separate files
 
 
 ## Back-End REST API with Express.JS
@@ -97,11 +111,40 @@ The syntax is usually middleware type such as use or get or post, then a middlwa
 
 - `Delete` Self-explanatory- deleting an existing user. Front -> Back 
 
-- All these requests are basically middleware functions in Express. The are also called Routes. It is good practice to have a separate routes folder containing a file like `users-routes.js`
+- All these requests are basically middleware functions in Express. The are also called Routes. It is good practice to have a separate routes folder containing a file like `users-routes.js`. You can specify `const router=express.Router();`
 
 - All of the places where express is being used, it should be imported in the file
+
+Below are all the routing methods available in Express
+
+checkout
+copy
+`delete`
+`get`
+head
+lock
+merge
+mkactivity
+mkcol
+move
+m-search
+notify
+options
+`patch`
+`post`
+purge
+`put`
+report
+search
+subscribe
+trace
+unlock
+unsubscribe
+
+
 
 **Linking files with app.js, Import/Export modules** 
 
 - The file to be linked e-g user-routes.js should include a command that exports the module such as `module.exports=router`
 - Next in the aap.js you have to import the user-routes.js at the top with the following command `const userRoutes=require(./routes/user-routes)` you do not have to specify the file   extension when importing
+- And then invoke it as a middlware with `app.use(userRoutes);` which will execute all of the code inside the user-routes.js file
