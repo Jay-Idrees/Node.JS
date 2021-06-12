@@ -43,7 +43,7 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - A lot of the middlewares have request, response and call back functions. All the script in app.js is run once by Node and the tasks associated with the callback functions are followed up as the responses are received. In other words it does not wait for the a middleware function to complete and only then moving on to the next one. It operates in an asynchronous fashion. 
 
-- A typical middleware function includes `app.get('/',(req, res, next)=>{ });` Where you first specify the path (this is important as it defines when the request function will be executed), then a call back function that takes request, response and next (which instructs to move to the next middleware after next middleware after executing the request, next is important if there are multiple call back functions in the middleware
+- A typical middleware function includes `app.get('/',(req, res, next)=>{ });` Where you first specify the path (this is important as it defines when the request function will be executed), then a call back function that takes request, response and next (which instructs to move to the next middleware after executing the request, next is important if there are multiple call back functions in the middleware)
 
 
 -`app.use` This is non-specific
