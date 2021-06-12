@@ -94,3 +94,12 @@ The syntax is usually middleware type such as use or get or post, then a middlwa
 - `Patch` To modify existing data in a Back-End database. First existing data is retrieved, then it is modified and then sent back to the Back-End database. Back -> Front -> Back
 
 - `Delete` Self-explanatory- deleting an existing user. Front -> Back 
+
+- All these requests are basically middleware functions in Express. The are also called Routes. It is good practice to have a separate routes folder containing a file like `users-routes.js`
+
+- All of the places where express is being used, it should be imported in the file
+
+**Linking files with app.js**
+
+- The file to be linked e-g user-routes.js should include a command that exports the module such as `module.exports=router`
+- Next in the aap.js you have to import the user-routes.js at the top with the following command `const userRoutes=require(./routes/user-routes)` you do not have to specify the file   extension when importing
