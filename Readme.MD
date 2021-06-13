@@ -173,14 +173,14 @@ Below are all the routing methods available in Express
 
 - Here is the typical flow for handeling error:
     1. File structure: `controllers` with `user-controllers` folder with `user-controllers.js` file, `models` folder with `http-error.js`
-    2. App.js is the first point of contact, based on the path it decides which route to direct to e-g user-route in this case
-    3. In the user-router.js in routes folder, express.router is used to direct the request to the relevant controller based on path
-    4. In the controller file (e-g users-controllers) there is a getUserById variable containing the error function which is exported
-    5. The results of these controller functions are re-routed to the user-routes.js file in the routes folder, where the exported functions from the controller files are invoked
+    2. `App.js` is the first point of contact, based on the path it decides which route to direct to e-g user-route in this case
+    3. In the `user-router.js` in routes folder, `express.router` is used to direct the request to the relevant controller based on path
+    4. In the controller file (e-g users-controllers) there is a `getUserById` variable containing the error function which is exported
+    5. The results of these controller functions are re-routed to the `user-routes.js` file in the routes folder, where the exported functions from the controller files are invoked
 
-- So: App.js -> user-router.js -> users-controllers.js ->user-routes.js ->  back to App.js to move to the next middleware
+- So: `App.js` -> `user-router.js` -> `users-controllers.js` -> `user-routes.js` ->  back to `App.js` to move to the next middleware
 
-- After cirling back, then there is this additional middleware that send error response to the view based on whether the initial query produced a valid header indicating error
+- After cirling back to `app.js`, then there is this additional middleware that sends error response to the view based on whether the initial query produced a valid header indicating error
 
 ```javascript
 app.use((error, req, res, next) => {
