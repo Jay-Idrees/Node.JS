@@ -152,3 +152,9 @@ Below are all the routing methods available in Express
 - Next in the `aap.js` you have to import the user-routes.js at the top with the following command `const userRoutes=require(./routes/user-routes)` you do not have to specify the file   extension when importing. This line of code is the key. The variable **userRoutes** basically captures all the code inside the **user-routes.js**
 
 - And then invoke it as a middlware with `app.use('/user',userRoutes);` which will execute all of the code inside the user-routes.js file. Note the **'/user'** portion is important in combination with `app.use` because this is telling that all requests to the server with the URI (Uniform Resource Identifier) `/user` will be forwarded to the router `user-routes`
+
+## Handling Errors
+
+- There is a middleware function in Express that can be used to handle errors
+
+- Below the routes you can type `app.use((req,res,next))=>{});` This will be applied to every request comming to a server
