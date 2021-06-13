@@ -162,3 +162,32 @@ Below are all the routing methods available in Express
 - When handeling responses to the requests `res.status(error.code || 500)` will assign the error code if an error occurs. This can be followed by `res.json({Message: error.message|| 'An unknown error occurred'})`
 
 - If you are working with asynchronous code (consisting of call back functions- common) then use `next` for handeling errors, otherwise use `throw`
+
+**Using Model View Controller (MVC) for handeling Error**
+
+- The User sends requests which are received by the `Controller`. The controller manipulates these requests as programmed and then sends them to `Model` as instruction, the Model then updates the `View` for the user per request, in a common scenario the Model will directly deal with the databases in an application
+
+- Create a new folder called `controllers` and then create `user-controllers.js`
+
+- You can export multiple things using export modules. Instead of module.exports you can use `exports.getUserById=getUserById`; (do not add () - express will run the function by itself)
+
+- Here is the typical flow for handeling error:
+    1. File structure: `controllers` with `user-controllers` folder with `user-controllers.js` file, `models` folder with `http-error.js`
+    2. App.js is the first point of contact, based on the path it decides which route to direct to e-g user-route in this case
+    3. In the user-router.js in routes folder, express.router is used to direct the request to the relevant controller based on path
+    4. In the controller file (e-g users-controllers) there is a getUserById variable containing the error function which is exported
+    5. The results of these controller functions are re-routed to the user-routes.js file in the routes folder, where the exported functions from the controller files are invoked
+
+- So: App.js -> user-router.js -> users-controllers.js ->user-routes.js ->  back to App.js to move to the next middleware
+
+- After cirling back, then there is this additional middleware that send error response to the view based on whether the initial query produced a valid header indicating error
+
+```javascript
+app.use((error, req, res, next) => {
+  if (res.headerSent) {
+    return next(error);
+  }
+  res.status(error.code || 500)
+  res.json({message: error.message || 'An unknown error occurred!'});
+});
+```
