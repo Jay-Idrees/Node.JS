@@ -157,6 +157,8 @@ Below are all the routing methods available in Express
 
 - There is a middleware function in Express that can be used to handle errors
 
-- Below the routes you can type `app.use((error,req,res,next)=>{});` This will be applied to every request comming to a server. It should be below the routes middleware. Note that this middleware takes 4 parameters, Express will automatically notice this and recognize it to be the middleware with an error handling function
+- Below the routes you can type `app.use((error,req,res,next)=>{});` This will be applied to every request comming to a server. It **should be below the routes middleware**. Note that this middleware takes 4 parameters, Express will automatically notice this and recognize it to be the middleware with an error handling function
 
-- 
+- When handeling responses to the requests `res.status(error.code || 500)` will assign the error code if an error occurs. This can be followed by `res.json({Message: error.message|| 'An unknown error occurred'})`
+
+- If you are working with asynchronous code (consisting of call back functions- common) then use `next` for handeling errors, otherwise use `throw`
