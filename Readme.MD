@@ -157,4 +157,6 @@ Below are all the routing methods available in Express
 
 - There is a middleware function in Express that can be used to handle errors
 
-- Below the routes you can type `app.use((req,res,next))=>{});` This will be applied to every request comming to a server
+- Below the routes you can type `app.use((error,req,res,next)=>{});` This will be applied to every request comming to a server. It should be below the routes middleware. Note that this middleware takes 4 parameters, Express will automatically notice this and recognize it to be the middleware with an error handling function
+
+- 
