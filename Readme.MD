@@ -96,6 +96,17 @@ The syntax is usually a middleware type such as use or get or post, then a middl
 
 - At the top of `app.js` you can type `const router=expres.Router()` - You can use this when you are looking to use export modules for routing methods - as in separate files
 
+- **Package unique ID**
+- `npm install uuid --save-dev` It has different versions. You can import it in the users-controller `const uuid=require(uuid/v4)` It has multiple versions, the v4 has a unique id and a time stamp
+
+**Express Package Input Validator**
+- Validates input
+- `npm install express-validator --save`
+- Usually input needs to be validated in post and patch requests
+
+**Express Package Axios**
+- This package is used to send requests from the front end application to the backend
+- `npm install axios --save
 
 ## Back-End REST API with Express.JS
 
@@ -173,16 +184,19 @@ Below are all the routing methods available in Express
 
 - Here is the typical flow for handeling error:
     1. File structure: `controllers` with `user-controllers` folder with `user-controllers.js` file, `models` folder with `http-error.js`
-    2. `App.js` is the first point of contact, based on the path it decides which route to direct to e-g user-route in this case
-    3. In the `user-router.js` in routes folder, `express.router` is used to direct the request to the relevant controller based on path
-    4. In the controller file (e-g users-controllers) there is a `getUserById` variable containing the error function which is exported
-    5. The results of these controller functions are re-routed to the `user-routes.js` file in the routes folder, where the exported functions from the controller files are invoked
+    2. `App.js` is the first point of contact. Based on the path, it decides which route to direct to e-g user-route in this case
+    3. In the `user-router.js` in routes folder, `express.router` is used to direct the request to the relevant controller file based on path
+    4. In the controller file (e-g `users-controllers.js`) there is a `getUserById` variable containing the error function which is exported
+    5. The results of these controller functions (exported `getUserById` function) are re-routed to the `user-routes.js` file in the routes folder, where the exported functions from the controller files are invoked
 
 - So: `App.js` -> `user-router.js` -> `users-controllers.js` -> `user-routes.js` ->  back to `App.js` to move to the next middleware
 
 - After cirling back to `app.js`, then there is this additional middleware that sends error response to the view based on whether the initial query produced a valid header indicating error
 
 ```javascript
+
+app.use('/api/users', userRoutes); // => /api/places...
+
 app.use((error, req, res, next) => {
   if (res.headerSent) {
     return next(error);
