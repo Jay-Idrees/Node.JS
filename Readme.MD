@@ -196,6 +196,12 @@ module.exports={
 module.exports.handler=requestHandler;
 module.exports.someText='Some hard coded text';
 
+//OR
+exports.handler=requestHandler;
+exports.someText='Some hard coded text';
+
+
+
 // Then you can import this in app.js 
 
 const routes=require('./routes');
