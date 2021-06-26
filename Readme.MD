@@ -187,6 +187,12 @@ Below are all the routing methods available in Express
 - If there are multiple modules to be exported, you can also export it as an object. Below is an example:
 
 ```javascript
+
+// Standard
+module.exports=requestHandler;
+
+//OR
+
 module.exports={
   handler:requestHandler,
   someText:'Some hard coded text'
