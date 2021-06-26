@@ -41,6 +41,7 @@ const fs=require('fs'); // here you are storing the import function into a varia
 
 // Then you can invoke specific functions inside a module using the object oriented programming 
 fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
+  // The alternative writeFileSync - blocks code execution untill the file has been written
     if (err){
         console.log(err);
         return;
