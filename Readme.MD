@@ -184,6 +184,22 @@ Below are all the routing methods available in Express
 
 - The file to be linked e-g `user-routes.js` should include a command const `router=express.Router()` that exports the module such as `module.exports=router`
 
+- If there are multiple modules to be exported, you can also export it as an object. Below is an example:
+
+```javascript
+module.exports={
+  handler:requestHandler,
+  someText:'Some hard coded text'
+}
+
+// Then you can import this in app.js 
+
+const routes=require('./routes');
+const server=http.createServer(routes.handler) // Note how I am able to invoke it using object notation
+
+```
+
+
 - Next in the `aap.js` you have to import the user-routes.js at the top with the following command `const userRoutes=require(./routes/user-routes)` you do not have to specify the file   extension when importing. This line of code is the key. The variable **userRoutes** basically captures all the code inside the **user-routes.js**
 
 - And then invoke it as a middlware with `app.use('/user',userRoutes);` which will execute all of the code inside the user-routes.js file. Note the **'/user'** portion is important in combination with `app.use` because this is telling that all requests to the server with the URI (Uniform Resource Identifier) `/user` will be forwarded to the router `user-routes`
