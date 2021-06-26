@@ -6,13 +6,15 @@
 
 - Node.JS is running javascript outside the browser. It does not use DOM manpulation as there is no browser
 
+- Install the latest version of Node.JS from the following link: [**Node.JS Download**](https://nodejs.dev/download). NPM is a node package manager. When you install Node.JS it will automatically install NPM
+
 - It runs all code as a single javascript thread which triggers an event loop. But all requests are assigned a worker to complete the tasks - hence multi-thread, and when the task is complete - it reconnects with the event loop. From the coding perspective this operation is basically handled in the form of call back functions/async-await requests
 
 - Used to build servers for handling requests, so it is a substitute for PHP, Java
 
 - It runs event loops (running code only when events occur like requests) using multi-threading/asynshronous fashion. If you type `process.exit` inside the `createServer` code then it will exit. When you open the browser and type local host and port name, that is like sending a request to the server - that is when the code inside the `createServer` function will be executed
 
-- Install the latest version of Node.JS from the following link: [**Node.JS Download**](https://nodejs.dev/download). NPM is a node package manager. When you install Node.JS it will automatically install NPM
+
 
 - You can get some important infomation in the terminal if you console.log `req.url`, `req.method`, `req.headers`. For example in the code below
 
