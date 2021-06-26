@@ -191,6 +191,10 @@ module.exports={
   handler:requestHandler,
   someText:'Some hard coded text'
 }
+//OR
+
+module.exports.handler=requestHandler;
+module.exports.someText='Some hard coded text';
 
 // Then you can import this in app.js 
 
