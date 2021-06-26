@@ -8,9 +8,21 @@
 
 - Used to build servers for handling requests, so it is a substitute for PHP, Java
 
-- It runs event loops (running code only when events occur like requests) using multi-threading/asynshronous fashion. If you type `process.exit` inside the `createServer` code then it will exit. When you open the browser and type local host and port name, that is like sending a request to the server. that is when the code inside the `createServer` function will be executed
+- It runs event loops (running code only when events occur like requests) using multi-threading/asynshronous fashion. If you type `process.exit` inside the `createServer` code then it will exit. When you open the browser and type local host and port name, that is like sending a request to the server - that is when the code inside the `createServer` function will be executed
 
 - Install the latest version of Node.JS from the following link: [**Node.JS Download**](https://nodejs.dev/download). NPM is a node package manager. When you install Node.JS it will automatically install NPM
+
+- You can get some important infomation in the terminal if you console.log `req.url`, `req.method`, `req.headers`. For example in the code below
+
+```javascript
+const http=require('http');
+
+const server=http.createServer((req,res)=>{
+  console.log(req.url, req.method, req.headers);
+});
+
+server.listen
+```
 
 - The signature Node.JS file is `app.js`. This file can be run by typing `node app.js`
 
