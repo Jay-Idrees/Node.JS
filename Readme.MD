@@ -15,7 +15,7 @@
 - `require` is a globaly available function inside Node.JS. It informs which package to import or which file to import. The imports/exports are a mechanism to split the code into files which can later be bundled at the time of deployment
 
 ```javascript
-user=Jay
+user=`Jay`
 require('fs');
 // OR
 
@@ -106,7 +106,7 @@ The syntax is usually a middleware type such as use or get or post, then a middl
 
 **Express Package Axios**
 - This package is used to send requests from the front end application to the backend
-- `npm install axios --save
+- `npm install axios --save`
 
 ## Back-End REST API with Express.JS
 
