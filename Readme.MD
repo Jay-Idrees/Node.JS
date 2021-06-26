@@ -18,7 +18,9 @@
 const http=require('http');
 
 const server=http.createServer((req,res)=>{
+  // for example url may be /, method maybe GET and then rest of details in headers
   console.log(req.url, req.method, req.headers);
+  res.setHeader('Content-Type', 'text/html'); // This is attaching a header to a response
 });
 
 server.listen
