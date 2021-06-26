@@ -196,6 +196,7 @@ module.exports={
 
 const routes=require('./routes');
 const server=http.createServer(routes.handler) // Note how I am able to invoke it using object notation
+console.log(routes.someText)
 
 ```
 
