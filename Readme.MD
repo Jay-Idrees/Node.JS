@@ -273,3 +273,5 @@ app.use((error, req, res, next) => {
 - **Logical errors** - Code does not break, but the program does not run the way you expect it to. You will not get any error message
 
 - We can use start debugging in visual studio code to user the debugger. Also can be accessed with the shortcut F5. Select Node.JS as the environment. This gives you a debudding controller at the top, a debug console and a debugging banner at the bottom of the VS code
+
+- You can setup a break point inside the VS code node.js file and also execute the code inside the debug console
