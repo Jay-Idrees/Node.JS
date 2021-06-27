@@ -90,12 +90,14 @@ The syntax is usually a middleware type such as use or get or post, then a middl
 
 **Installing Express Package**
 
+- NPM (Node Package Manager), is automatically installed with node
+
 - Install with :
 - `npm init -y` This will create a `package.json` file where `-y` automatically selects yes for all the options
 
 - `npm install express --save` Here `--save` refers to core only dependency or `--save-dev` only for saving as a developement dependency - This updates the package.json with dependencies such that they can be re-installed later
 
-- If the node modules are deleted or you want to reinstall, if the package.json is present and express is specified as a dependency then simply typing `npm install` will re-install express.js
+- If the node_modules folder is deleted or you want to reinstall node packaged listed in package.json, if the package.json is present and express is specified as a dependency then simply typing `npm install` will re-install express.js
 
 **Using `.gitignore`**
 
@@ -108,9 +110,9 @@ The syntax is usually a middleware type such as use or get or post, then a middl
 - `npm install nodemon --save-dev`
 
 **NPM start**
-- Inside the `package.json`, under "scripts" { "start": "node app.js"} -this will allow you to just type `npm start` in the terminal in order to start the app
+- Inside the `package.json`, under "scripts": { "start": "node app.js"} -this will allow you to just type `npm start` in the terminal in order to start the app
 
-- Another trick is that under "scripts" { "start": "`nodemon` app.js"} will start app.js with nodemon. Note that for it to work 'nodemon' should be listed exactly under dependencies
+- Another trick is that under "scripts": { "start": "`nodemon` app.js"} will start app.js with nodemon. Note that for it to work 'nodemon' should be listed exactly under dependencies
 
 **Package Body-Parser**
 
@@ -246,7 +248,7 @@ console.log(routes.someText)
     4. In the controller file (e-g `users-controllers.js`) there is a `getUserById` variable containing the error function which is exported
     5. The results of these controller functions (exported `getUserById` function) are re-routed to the `user-routes.js` file in the routes folder, where the exported functions from the controller files are invoked
 
-- So: `App.js` -> `user-router.js` -> `users-controllers.js` -> `user-routes.js` ->  back to `App.js` to move to the next middleware
+- So: `App.js` -> `user-routes.js` -> `users-controllers.js` -> `user-routes.js` ->  back to `App.js` to move to the next middleware
 
 - After cirling back to `app.js`, then there is this additional middleware that sends error response to the view based on whether the initial query produced a valid header indicating error
 
@@ -262,3 +264,9 @@ app.use((error, req, res, next) => {
   res.json({message: error.message || 'An unknown error occurred!'});
 });
 ```
+
+## Types of errors
+
+- Syntax errors - error in the syntax
+- Runtime errors - code breaks while running
+- Logical errors - Code does not break, but the program does not run the way you expect it to. 
