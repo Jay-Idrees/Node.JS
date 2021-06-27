@@ -267,8 +267,9 @@ app.use((error, req, res, next) => {
 
 ## Types of errors
 
-- Syntax errors - error in the syntax- for example missing a t in const
+- **Syntax errors**- error in the syntax- for example missing a t in const, incorrect variable name somewhere in the code
   - `unexpected token` can occur when there is a missing bracket
-- Runtime errors - code breaks while running
-- Logical errors - Code does not break, but the program does not run the way you expect it to. 
+- **Runtime errors** - code breaks while running
+- **Logical errors** - Code does not break, but the program does not run the way you expect it to. You will not get any error message
 
+- We can use start debugging in visual studio code to user the debugger. Also can be accessed with the shortcut F5. Select Node.JS as the environment
