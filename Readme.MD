@@ -290,10 +290,14 @@ app.use((error, req, res, next) => {
   - **Restarting the debugger autmatically on files changes** or **Setting up nodmon with the debugger**
   - Go to `run` at the top of VS Code and select `add configuration`
   - This creates a .vscode folder with a launch.json file
-  - In the `lunch.json` file you can add: "restart":true, followed by "runtimeExecutable":"nodemon"
+  - In the `lunch.json` file you can add: "restart":true, followed by "runtimeExecutable":"nodemon". You can also specify "console":"Integratedterminal"
 
-  ```json
-      "version": "0.2.0",
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
     "configurations": [
         {
             "type": "pwa-node",
@@ -304,8 +308,10 @@ app.use((error, req, res, next) => {
             ],
             "program": "${workspaceFolder}\\app.js",
             "restart":true,
-            "runtimeExecutable":"nodemon"
+            "runtimeExecutable":"nodemon",
+            "console":"integratedTerminal"
         }
     ]
 }
+
 ```
