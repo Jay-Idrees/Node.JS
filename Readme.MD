@@ -272,9 +272,13 @@ app.use((error, req, res, next) => {
 - **Runtime errors** - code breaks while running
 - **Logical errors** - Code does not break, but the program does not run the way you expect it to. You will not get any error message
 
-- We can use debugging in visual studio code with the `**VS code debugger**`. It can also be accessed with the shortcut `F5`. Select Node.JS as the environment. This gives you a debudding controller at the top, a debug console and a debugging banner at the bottom of the VS code. 
+- We can use debugging in visual studio code with the `**VS code debugger**`. It can also be accessed with the shortcut `F5`. Select `Node.JS as the environment`. This gives you a `debudding controller` at the top, a `debug console` and a `debugging banner` at the bottom of the VS code. You can also select the  `run and debug` from the left most column to open up the debugging panel
 
 - You can hover over the variables e-g const message, to see what is inside them as the code is run, you can also find more detailed infomation about these in the column on the left side
 
 - You can **setup a break point** inside the VS code node.js file and also execute the code by typing it inside the debug console- to test real time changes to code before implementing them. The break point is helpful because it will instruct the debugger about how far to run the code which helps with loclizing the error in the code.
 
+- Features of the debuging pannel:
+  - `local` - shows all the variable contents
+  - `closure` - Reveals how the process ended e-g creating a file or sending a server response
+  - `Global` - Reveals other global variables that are created behind the scenes in Node while running the program
