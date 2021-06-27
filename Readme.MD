@@ -63,7 +63,7 @@ fs.writeFile('filename.txt', 'Content: `+ user, (err)=>{
 
 - It handles creation of servers behind the scenes. The requests to and from the server are then handled with middlewares that can perform actions on incoming/outgoing requests according to needs. It allows us to create our own middlewares
 
-- Express is all about middlewares. A middleware is a set of functions that are applied to an incoming request. The result is a response or passing on to another middleware. A middleware is usually characterized as a function with parameters `(req,res,next)`. A response is characterized by `res.send()`
+- Express is all about middlewares. A middleware is a set of functions that are applied to an incoming request. The result is a response or passing on to another middleware. A middleware is usually characterized as a function with parameters `(req,res,next)`. The `next` here is important- it is a function that allows the request to travel to the next middleware. A response is characterized by `res.send()`. 
 
 - A lot of the middlewares have request, response and call back functions. All the script in app.js is run once by Node and the tasks associated with the callback functions are followed up as the responses are received. In other words it does not wait for the a middleware function to complete and only then moving on to the next one. It operates in an asynchronous fashion. 
 
