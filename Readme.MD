@@ -279,6 +279,7 @@ app.use((error, req, res, next) => {
 - You can **setup a break point** inside the VS code node.js file and also execute the code by typing it inside the debug console- to test real time changes to code before implementing them. The break point is helpful because it will instruct the debugger about how far to run the code which helps with loclizing the error in the code.
 
 - Features of the debuging pannel:
-  - `local` - shows all the variable contents
+  - `local` - shows all the variable contents - you can also double click a variable here to change its value in real time
   - `closure` - Reveals how the process ended e-g creating a file or sending a server response
   - `Global` - Reveals other global variables that are created behind the scenes in Node while running the program
+  - `watch` - allows you to type in a specific variable to be watched for what it contains every time the code is run
