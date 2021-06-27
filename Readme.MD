@@ -97,9 +97,11 @@ The syntax is usually a middleware type such as use or get or post, then a middl
 
 - `npm install express --save` Here `--save` refers to core only dependency or `--save-dev` only for saving as a developement dependency - This updates the package.json with dependencies such that they can be re-installed later. 
 
-- Note that `--sav-dev` usually specifies installation of dependencies that are used during the developement mode and are not required by the production mode.  `Express.js` is usually required for the app to run in the production mode- the final product-therefore it should not be installed as a dev dependency so use `--save` alone during installation instead of `--save-dev`
+- Note that `--save-dev` usually specifies installation of dependencies that are used during the developement mode and are not required by the production mode.  `Express.js` is usually required for the app to run in the production mode- the final product-therefore it should not be installed as a dev dependency so use `--save` alone during installation instead of `--save-dev`
 
 - If the node_modules folder is deleted or you want to reinstall node packaged listed in package.json, if the package.json is present and express is specified as a dependency then simply typing `npm install` will re-install express.js
+
+- You can look at the source code for Express by pressing Ctrl and then clicking express() in `const app=express()`
 
 **Using `.gitignore`**
 
