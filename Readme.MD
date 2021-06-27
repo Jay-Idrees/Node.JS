@@ -92,7 +92,9 @@ The syntax is usually a middleware type such as use or get or post, then a middl
 
 **Installing Express Package**
 
-- NPM (Node Package Manager), is automatically installed with node
+- NPM (Node Package Manager), is automatically installed with node. You can type `npm -v` to obtain the curent version of node installed
+
+- You can check if a package is installed by typing `npm ls <package_name>` or `npm ls <package_name> --json`. If you add `-g` in the end then it will search whether the package is installed globally. If it is not then the response will come back as 'empty'. For example checking whether nodemon is installed globally you can type: `npm ls nodemon -g`
 
 - Install with :
 - `npm init -y` This will create a `package.json` file where `-y` automatically selects yes for all the options
