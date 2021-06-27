@@ -283,3 +283,4 @@ app.use((error, req, res, next) => {
   - `closure` - Reveals how the process ended e-g creating a file or sending a server response
   - `Global` - Reveals other global variables that are created behind the scenes in Node while running the program
   - `watch` - allows you to type in a specific variable to be watched for what it contains every time the code is run
+  - `breakpoints`- lets you selectunselect specific breakpoints while runing the code
