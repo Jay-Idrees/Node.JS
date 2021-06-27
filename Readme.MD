@@ -272,7 +272,7 @@ app.use((error, req, res, next) => {
 - **Runtime errors** - code breaks while running
 - **Logical errors** - Code does not break, but the program does not run the way you expect it to. You will not get any error message
 
-- We can use debugging in visual studio code with the `**VS code debugger**`. It can also be accessed with the shortcut `F5`. Select `Node.JS as the environment`. This gives you a `debudding controller` at the top, a `debug console` and a `debugging banner` at the bottom of the VS code. You can also select the  `run and debug` from the left most column to open up the debugging panel
+- We can use debugging in visual studio code with the **`VS code debugger`**. It can also be accessed with the shortcut `F5`. Select `Node.JS as the environment`. This gives you a `debudding controller` at the top, a `debug console` and a `debugging banner` at the bottom of the VS code. You can also select the  `run and debug` from the left most column to open up the debugging panel
 
 - You can hover over the variables e-g const message, to see what is inside them as the code is run, you can also find more detailed infomation about these in the column on the left side
 
