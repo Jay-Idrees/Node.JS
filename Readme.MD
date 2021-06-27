@@ -265,7 +265,7 @@ app.use((error, req, res, next) => {
 });
 ```
 
-## Types of errors
+## Types of errors and Using `VS Code Debugger`
 
 - **Syntax errors**- error in the syntax- for example missing a t in const, incorrect variable name somewhere in the code
   - `unexpected token` can occur when there is a missing bracket
