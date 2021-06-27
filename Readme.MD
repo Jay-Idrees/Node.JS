@@ -267,6 +267,8 @@ app.use((error, req, res, next) => {
 
 ## Types of errors
 
-- Syntax errors - error in the syntax
+- Syntax errors - error in the syntax- for example missing a t in const
+  - `unexpected token` can occur when there is a missing bracket
 - Runtime errors - code breaks while running
 - Logical errors - Code does not break, but the program does not run the way you expect it to. 
+
