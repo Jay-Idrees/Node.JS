@@ -279,8 +279,33 @@ app.use((error, req, res, next) => {
 - You can **setup a break point** inside the VS code node.js file and also execute the code by typing it inside the debug console- to test real time changes to code before implementing them. The break point is helpful because it will instruct the debugger about how far to run the code which helps with loclizing the error in the code.
 
 - Features of the debuging pannel:
-  - `local` - shows all the variable contents - you can also double click a variable here to change its value in real time
+  - `local` - shows all the variable contents - you can also double click a variable here to change its value in real time. Note that you can also type in a variable in the the debugging console to see its value
   - `closure` - Reveals how the process ended e-g creating a file or sending a server response
   - `Global` - Reveals other global variables that are created behind the scenes in Node while running the program
   - `watch` - allows you to type in a specific variable to be watched for what it contains every time the code is run
   - `breakpoints`- lets you selectunselect specific breakpoints while runing the code
+
+  - The debugging console also allows you to make real time changes to the code and see instant results
+
+  - **Restarting the debugger autmatically on files changes** or **Setting up nodmon with the debugger**
+  - Go to `run` at the top of VS Code and select `add configuration`
+  - This creates a .vscode folder with a launch.json file
+  - In the `lunch.json` file you can add: "restart":true, followed by "runtimeExecutable":"nodemon"
+
+  ```json
+      "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\app.js",
+            "restart":true,
+            "runtimeExecutable":"nodemon"
+        }
+    ]
+}
+```
