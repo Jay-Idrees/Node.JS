@@ -313,3 +313,5 @@ app.use((error, req, res, next) => {
 }
 
 ```
+- For the debugger to work globally, you should install nodemon globally: `npm install nodemon -g`
+- Remember that if you make changes. Stop the debugger first before saving(which will automatically restart both) otherwise it will give errors. 
