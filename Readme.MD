@@ -164,8 +164,8 @@ Below are all the routing methods available in Express
 
 - checkout
 - copy
-- `delete`
-- `get`
+- `delete` you can use it as  `app.delete`
+- `get`    you can use it as `app.get`
 - head
 - lock
 - merge
@@ -175,10 +175,10 @@ Below are all the routing methods available in Express
 - m-search
 - notify
 - options
-- `patch`
-- `post`
+- `patch` you can use it as `app.patch`
+- `post`  you can use it as `app.post`
 - purge
-- `put`
+- `put`  you can use it as `app.put`
 - report
 - search
 - subscribe
