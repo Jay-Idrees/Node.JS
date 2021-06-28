@@ -160,6 +160,8 @@ The syntax is usually a middleware type such as use or get or post, then a middl
 
 - All of the places where express is being used, it should be imported in the file
 
+- The express function can be captured into a variable, traditionally named app as `const app=express()`
+
 Below are all the routing methods available in Express
 
 - checkout
@@ -196,6 +198,7 @@ Below are all the routing methods available in Express
 - `res.render`
 - `res.end`
 - `res.sendFile`
+- `res.download`
 
 **Express.Router Linking files with app.js, Import/Export modules** 
 
