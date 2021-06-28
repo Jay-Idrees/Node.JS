@@ -126,10 +126,6 @@ The syntax is usually a middleware type such as use or get or post, then a middl
 
 - `npm install body-parser --save-dev`
 
-**Using Express Router**
-
-- At the top of `app.js` you can type `const router=expres.Router()` - You can use this when you are looking to use export modules for routing methods - as in separate files
-
 - **Package unique ID**
 - `npm install uuid --save-dev` It has different versions. You can import it in the users-controller `const uuid=require(uuid/v4)` It has multiple versions, the v4 has a unique id and a time stamp
 
@@ -199,13 +195,11 @@ Below are all the routing methods available in Express
 - `res.end`
 - `res.sendFile`
 - `res.download`
+- `res.setHeader`
 
-**Express.Router Linking files with app.js, Import/Export modules** 
+- These methods can also be chained like `res.status(404).send('<h1>Page Not Found<h1>)`
 
-- Express.Router allows nesting a mini-server inside the server by allowing the code to be spread out over multiple files
-
-- The file to be linked e-g `user-routes.js` should include a command const `router=express.Router()` that exports the module such as `module.exports=router`
-
+**Exporting modules for linking files to app.js**
 - If there are multiple modules to be exported, you can also export it as an object. Below is an example:
 
 ```javascript
@@ -237,11 +231,36 @@ const server=http.createServer(routes.handler) // Note how I am able to invoke i
 console.log(routes.someText)
 
 ```
+## Using Express Routes
 
+- At the top of `app.js` you can type `const router=expres.Router()` - You can use this when you are looking to use export modules for routing methods - as in separate files
 
 - Next in the `aap.js` you have to import the user-routes.js at the top with the following command `const userRoutes=require(./routes/user-routes)` you do not have to specify the file   extension when importing. This line of code is the key. The variable **userRoutes** basically captures all the code inside the **user-routes.js**
 
 - And then invoke it as a middlware with `app.use('/user',userRoutes);` which will execute all of the code inside the user-routes.js file. Note the **'/user'** portion is important in combination with `app.use` because this is telling that all requests to the server with the URI (Uniform Resource Identifier) `/user` will be forwarded to the router `user-routes`
+
+
+**Express.Router Linking files with app.js, Import/Export modules** 
+
+- Express.Router allows nesting a mini-server inside the server by allowing the code to be spread out over multiple files
+
+- The file to be linked e-g `user-routes.js` should include a command const `router=express.Router()` that exports the module such as `module.exports=router`
+
+## Sending a file 
+
+- Below is an example syntax
+
+```javascript
+const path=reqire('path');
+const express=require('express');
+const router=express.Router();
+
+router.get('/', (req,res,next)=>{
+  // Here __dirname locates the folder the current file is in, then ../ tells it to go up one level 
+  // Then enter the views folder and get the file shop.html
+  res.sendFile(path.join(__dirname, '../','views','shop.html'))
+})
+```
 
 ## Handling Errors
 
