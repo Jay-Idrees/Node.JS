@@ -186,7 +186,16 @@ Below are all the routing methods available in Express
 - unlock
 - unsubscribe
 
+- The above are all the options with requests. you can also send responses with the res method. Options are below:
 
+- `res.send`
+- `res.status`
+- `res.sendStatus`
+- `res.append`
+- `res.redirect`
+- `res.render`
+- `res.end`
+- `res.sendFile`
 
 **Express.Router Linking files with app.js, Import/Export modules** 
 
