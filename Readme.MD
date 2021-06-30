@@ -260,7 +260,24 @@ router.get('/', (req,res,next)=>{
   // Then enter the views folder and get the file shop.html
   res.sendFile(path.join(__dirname, '../','views','shop.html'))
 })
+export.modules=router;
 ```
+
+- Note that you can bypass dealing with `__dirname`, `'../'` by using a shortcut by creating a util folder and an export module that sets the default location for path to be app.js as below:
+
+```javascript
+const path=requre('path);
+
+//This sets the default location to start from where the app.js is located
+export.modules=path.dirname(process.mainModule.filename)
+// You can import this module by capturing its path into a variable rootDir for use
+```
+
+
+
+
+
+
 
 ## Handling Errors
 
