@@ -293,7 +293,7 @@ module.exports=router
 
 
 
-## Handling Errors
+## Handeling Errors
 
 - There is a middleware function in Express that can be used to handle errors
 
