@@ -269,8 +269,9 @@ export.modules=router;
 const path=requre('path);
 
 // This sets the default location to start from where the app.js is located
-export.modules=path.dirname(process.mainModule.filename)
 // You can import this module by capturing its path into a variable rootDir for use
+export.modules=path.dirname(process.mainModule.filename)
+
 ```
 - The above code can be created in the util folder. Then it can be imported into another file, for example the routes, as needed. See below:
 
