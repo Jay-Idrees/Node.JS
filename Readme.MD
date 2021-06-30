@@ -268,7 +268,7 @@ export.modules=router;
 ```javascript
 const path=requre('path);
 
-//This sets the default location to start from where the app.js is located
+// This sets the default location to start from where the app.js is located
 export.modules=path.dirname(process.mainModule.filename)
 // You can import this module by capturing its path into a variable rootDir for use
 ```
