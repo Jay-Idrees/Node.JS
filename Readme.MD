@@ -272,7 +272,21 @@ const path=requre('path);
 export.modules=path.dirname(process.mainModule.filename)
 // You can import this module by capturing its path into a variable rootDir for use
 ```
+- The above code can be created in the util folder. Then it can be imported into another file, for example the routes, as needed. See below:
 
+```javascript
+const rootDir=require('./util/path)');
+const router=expess.Router();
+const express=require('express')
+const path=require('path');
+
+
+router.ger('/',(req,res,next)=>{
+  res.sendFile(path.join(rootDir, 'view', 'shop.html'));
+});
+
+module.exports=router
+```
 
 
 
