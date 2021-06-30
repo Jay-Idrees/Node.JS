@@ -266,12 +266,12 @@ export.modules=router;
 - Note that you can bypass dealing with `__dirname`, `'../'` by using a shortcut by creating a util folder and an export module that sets the default location for path to be app.js as below:
 
 ```javascript
-const path=requre('path);
+const path=requre('path');
 
 // This sets the default location to start from where the app.js is located
-// You can import this module by capturing its path into a variable rootDir for use
-export.modules=path.dirname(process.mainModule.filename)
 
+export.modules=path.dirname(process.mainModule.filename)
+// You can import this module by capturing its path into a variable rootDir for use
 ```
 - The above code can be created in the util folder. Then it can be imported into another file, for example the routes, as needed. See below:
 
