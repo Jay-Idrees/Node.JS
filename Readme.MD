@@ -292,10 +292,10 @@ module.exports=router
 
 ```js
 // In the app.js you can have the following code
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'public'))); // Here public folder contains the supporting files
 // Alternative if you have created a util for export.modules=path.dirname(process.mainModule.filename)
 // and invoked it into app.js as rootDir then you can use rootDir inplace of __dirname
-
+```
 
 
 
