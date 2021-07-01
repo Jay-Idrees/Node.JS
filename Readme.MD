@@ -288,6 +288,14 @@ router.ger('/',(req,res,next)=>{
 
 module.exports=router
 ```
+- Sending static files. These are files that contain important code to link to the HTML files. For example it can be CSS files or Javascript code files
+
+```js
+// In the app.js you can have the following code
+app.use(express.static(path.join(__dirname,'public')));
+// Alternative if you have created a util for export.modules=path.dirname(process.mainModule.filename)
+// and invoked it into app.js as rootDir then you can use rootDir inplace of __dirname
+
 
 
 
