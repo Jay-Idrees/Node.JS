@@ -293,8 +293,12 @@ module.exports=router
 ```js
 // In the app.js you can have the following code
 app.use(express.static(path.join(__dirname,'public'))); // Here public folder contains the supporting files
+// Make sure the supporting files are correctly linked e-g to HTML pages
 // Alternative if you have created a util for export.modules=path.dirname(process.mainModule.filename)
 // and invoked it into app.js as rootDir then you can use rootDir inplace of __dirname
+// <script src="/alert.js"></script>, note the slash ahead and no mention of 'public'
+// The later is taken care of by the express.static code line
+// All files served on routes will have the files in public folder available
 ```
 
 
