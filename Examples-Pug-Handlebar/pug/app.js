@@ -1,6 +1,5 @@
 const bodyParser = require('body-parser');
 const express=require('express');
-// const pug=require('pug');
 
 
 const app=express();
@@ -16,5 +15,4 @@ app.get('/',(req,res,next)=>{
     res.render('index', {pageTitle:"Add User"});
 })
 
-
-app.listen(5000)
+app.listen(6000)
