@@ -1,6 +1,6 @@
 const bodyParser = require('body-parser');
 const express=require('express');
-const pug=require('pug');
+// const pug=require('pug');
 
 
 const app=express();
@@ -13,7 +13,8 @@ app.set('views','views');
 app.use(bodyParser.urlencoded({extended:false}))
 
 app.get('/',(req,res,next)=>{
-    res.render('index',)
+    res.render('index', )
 })
 
 
+app.listen(5000)
