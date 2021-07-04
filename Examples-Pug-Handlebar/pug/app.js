@@ -20,6 +20,12 @@ app.get('/users', (req,res,next)=>{
     res.render('users', {pageTitle:'users', users:users})
 });
 
+app.post('/add-user', (req,res,next)=>{
+    users.push({name:req.body.username});
+    res.redirect('/users')
+
+})
+
 
 
 
