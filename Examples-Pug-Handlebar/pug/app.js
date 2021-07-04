@@ -2,7 +2,7 @@ const express=require('express');
 const bodyParser = require('body-parser');
 
 const app=express();
-const users=[];
+const usersA=[];
 
 
 
@@ -20,18 +20,14 @@ app.get('/',(req,res,next)=>{
 
 app.get('/users', (req,res,next)=>{
     // The blue users here should match what is used in the users.pug
-    res.render('users', {pageTitle:'User', users:users});
+    res.render('users', {pageTitle:'User', users:usersA});
 });
 
 app.post('/add-user',(req,res,next)=>{
-    users.push({name:req.body.username});
+    usersA.push({name:req.body.username});
     res.redirect("/users");
 });
 
-// app.post('/add-user', (req, res, next) => {
-//     users.push({ name: req.body.username });
-//     res.redirect('/users');
-//   });
   
 
 app.listen(5000)

@@ -1,5 +1,7 @@
 //- Note that indentations are important in pug. The execution code shoud be in a column to the left of 'block content'
 //- Normal // does not work like typically for javascript
+//- For line 10, the users here must match the users in the get request of the '/users' url, which intern must be referenced to the users variable in app.js
+//- The name of the 'users' variable can be whatever, but if you select users here, it must match with 'users' in the corresponding get request - I changed the users variable to usersA and it worked
 
 extends layouts/main-layouts.pug 
 block content 
