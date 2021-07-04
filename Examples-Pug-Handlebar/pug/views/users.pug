@@ -1,9 +1,12 @@
-extends layouts/main-layout.pug 
+//- Note that indentations are important in pug. The execution code shoud be in a column to the left of 'block content'
+//- Normal // does not work like typically for javascript
+
+extends layouts/main-layouts.pug 
 block content 
-h1 users 
-if users.length>0
-    ul 
-    each user in users // Here the word users is a variable that I created in the app.js which contains all the users -This should also match with the get request for rendering this page in app.js
-    li #{user.name} 
-else 
-h1 No users found
+    h1 users 
+    if users.length>0
+        ul 
+            each user in users
+                li #{user.name} 
+    else 
+        h1 No users found

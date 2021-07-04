@@ -1,5 +1,7 @@
-extends layouts/main-layout.pug
+extends layouts/main-layouts.pug
+//- The spacing after the form to the left with input and button is important otherwise the code wont work
 block content
   form(action="/add-user", method="POST")
-  input(type='text', name='username')
-  button(type="submit") Add User
+    input(type="text", name="username")
+    button(type="submit") Add User
+
