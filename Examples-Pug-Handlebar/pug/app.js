@@ -25,6 +25,8 @@ app.get('/users', (req,res,next)=>{
 
 app.post('/add-user',(req,res,next)=>{
     usersA.push({name:req.body.username});
+    console.log(users);
+    console.log(req.body.username)
     res.redirect("/users");
 });
 
