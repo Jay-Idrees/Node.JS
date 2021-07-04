@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const express=require('express');
 
+const users=[]
 
 const app=express();
 
@@ -13,6 +14,13 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 app.get('/',(req,res,next)=>{
     res.render('index', {pageTitle:"Add User"});
+});
+
+app.get('/', (req,res,next)=>{
+    res.render('users', {pageTitle:"Users", users:users})
 })
+
+app.post('/add-user', )
+
 
 app.listen(6000)
