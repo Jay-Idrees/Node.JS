@@ -10,17 +10,13 @@ app.set('view engine','pug');
 // This line is defining the folder where the pug files are located
 app.set('views','views');
 
-app.use(bodyParser.urlencoded({extended:false}))
-
-app.get('/',(req,res,next)=>{
-    res.render('index', {pageTitle:"Add User"});
-});
+app.use(bodyParser.urlencoded({extended:false}));
 
 app.get('/', (req,res,next)=>{
-    res.render('users', {pageTitle:"Users", users:users})
-})
-
-app.post('/add-user', )
+    res.render('index', {pageTitle:'Add User'});
+});
 
 
-app.listen(6000)
+
+
+app.listen(5000)
