@@ -16,6 +16,10 @@ app.get('/', (req,res,next)=>{
     res.render('index', {pageTitle:'Add User'});
 });
 
+app.get('/users', (req,res,next)=>{
+    res.render('users', {pageTitle:'users', users:users})
+});
+
 
 
 
