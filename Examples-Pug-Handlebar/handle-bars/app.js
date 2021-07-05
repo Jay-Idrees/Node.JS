@@ -11,12 +11,17 @@ app.set('views','views')
 app.use(bodyParser.urlencoded({extended:false}));
 
 
-
-
-
 app.get('/',(req,res,next)=>{
-    console.log("Testing the get route")
-})
+    
+});
+
+app.get('/users', (req,res,req)=>{
+
+});
+
+app.post('/add-user', (req,res,next)=>{
+
+});
 
 
 
