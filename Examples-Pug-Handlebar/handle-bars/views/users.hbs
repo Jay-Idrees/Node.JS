@@ -3,8 +3,9 @@
     <ul>
         {{#each users}}
             <li>{{this.name}}</li>
-        {{/else}}
+        {{/each}}
     </ul>
-    {{else}}
+    {{!-- Note that the spacing here in else is important-the first one especially --}}
+{{ else}}
     <h1>No Users Found !</h1>
     {{/if}}
