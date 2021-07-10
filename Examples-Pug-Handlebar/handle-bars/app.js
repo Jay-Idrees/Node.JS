@@ -5,8 +5,9 @@ const expressHbs=require('express-handlebars');
 const users=[];
 
 const app=express();
+
 app.engine('hbs',expressHbs({defaultLayout:'main-layouts', extname:'hbs'}));
-app.set('view engine', 'hbs');
+// app.set('view engine', 'hbs');
 app.set('views','views');
 
 app.use(bodyParser.urlencoded({extended:false}));
@@ -17,13 +18,15 @@ app.get('/',(req,res,next)=>{
     
 });
 
-app.get('/users', (req,res,req)=>{ 
-
+app.get('/users', (req,res,next)=>{ 
+    res.render('users', {pageTitle:'Users', users:users, hasUsers:users.length>0}, )
 });
 
 
 
 app.post('/add-user', (req,res,next)=>{
+ users.push({name:req.body.username});
+ res.redirect('/users')
 
 });
 
